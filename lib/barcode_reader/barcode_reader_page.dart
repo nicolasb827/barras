@@ -41,10 +41,10 @@ class BarcodeReaderPage extends StatefulWidget {
 class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
   QRCaptureController _captureController = QRCaptureController();
 
-  bool _hasTorch = false;
+  bool? _hasTorch = false;
   bool _isTorchOn = false;
   bool _isBorderVisible = false;
-  Timer _borderFlashTimer;
+  late Timer _borderFlashTimer;
 
   @override
   void initState() {
@@ -139,7 +139,7 @@ class _BarcodeReaderPageState extends State<BarcodeReaderPage> {
   }
 
   Widget _buildTorchButton() {
-    return (_hasTorch)
+    return _hasTorch!
         ? IconButton(
             icon: Icon(
               (_isTorchOn) ? Icons.flash_on : Icons.flash_off,

@@ -4,16 +4,18 @@ version: 0.0.2
 homepage: https://github.com/deadblit/barras
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
   flutter: ">=1.17.0 <2.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  qrcode: ^1.0.4
-  torch_compat: ^1.0.2
-  flutter_beep: ^0.2.0
+  qrcode: 
+    path: qrcode # replaces ^1.0.4 as its not null safety ready
+  torch_compat:
+    path: flutter_torch_compat # https://github.com/loonix/flutter_torch_compat.git # replaces ^1.0.2 as its not null safety ready
+  flutter_beep: ^1.0.0
 
 dev_dependencies:
   flutter_test:
