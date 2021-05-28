@@ -1,4 +1,4 @@
-# Barras
+# Barras - Qrcode Scanner with null-safety support
 
 This document is also available in: **English** \| [Português](https://github.com/deadblit/barras/blob/main/README-pt_BR.md)
 
